@@ -1,0 +1,88 @@
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		<ul class="nav navbar-nav">
+			<li>
+				<button class="btn btn-link navbar-btn" type="button" ng-click="showDashboard()">
+					<span class="glyphicon glyphicon-circle-arrow-left"></span> Back
+				</button>
+			</li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			<li>
+				<button class="btn btn-link navbar-btn" type="button">
+					<span class="glyphicon glyphicon-refresh"></span> sync
+				</button>
+			</li>
+			<li>
+				<button class="btn btn-link navbar-btn" type="button">
+					<span class="glyphicon glyphicon-magnet"></span> master
+				</button>
+			</li>
+			<li>
+				<p class="navbar-text">
+					|
+				</p>
+			</li>
+			<li>
+				<button class="btn btn-link navbar-btn" type="button">
+					<span class="glyphicon glyphicon-cog"></span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</nav>
+<div class="container-fluid">
+	<div class="row clearfix">
+		<div class="col-md-4 column">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+				    <span class="panel-title">Uncommented changes
+						<button type="button" class="btn btn-link pull-right" data-toggle="collapse" data-target="#commitComments"><span class="glyphicon glyphicon-arrow-up"></span></button>
+			    	</span>
+				</div>
+				<div class="panel-collapse collapse in" id="commitComments">
+					<div class="panel-body">
+						<form role="form">
+							<div class="form-group">
+								<input type="text" class="form-control mono" id="comment" placeholder="Summary">
+							</div>
+							<div class="form-group">
+								<textarea class="form-control mono resize-vertical" id="description" rows="5" placeholder="Description"></textarea>
+							</div>
+							<button type="button" class="btn btn-link">
+								<span class="glyphicon glyphicon-ok-circle"></span> Commit
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<h3>History</h3>
+			<table class="table">
+				<tbody>
+					<tr>
+						<td style="width: 24px;"><img style="vertical-align: middle; !important" src="https://avatars3.githubusercontent.com/u/3310939?s=24"/></td>
+						<td><span class="mono">Implement sorting</span></td>
+					</tr>
+					<tr>
+						<td style="width: 24px;"><img style="vertical-align: middle; !important" src="https://avatars3.githubusercontent.com/u/3310939?s=24"/></td>
+						<td><span class="mono">Fix typo</span></td>
+					</tr>
+					<tr>
+						<td style="width: 24px;"><img style="vertical-align: middle; !important" src="https://avatars3.githubusercontent.com/u/3310939?s=24"/></td>
+						<td><span class="mono">Initial commit</span></td>
+					</tr>
+					<tr>
+						<td>
+							&nbsp;
+						</td>
+						<td>
+							&nbsp;
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-8 column">
+		</div>
+	</div>
+</div>

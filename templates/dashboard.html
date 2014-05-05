@@ -1,0 +1,70 @@
+<div class="container-fluid">
+	<div class="row clearfix">
+		<div class="col-md-2 column">
+			<h3>Local</h3>
+			<table class="table">
+				<tbody>
+					<tr>
+						<td ng-click="showRepositoriesFromSource('local')"><span class="glyphicon glyphicon-hdd"></span> <strong>repository</strong></td>
+					</tr>
+				</tbody>
+			</table>
+			<h3>Remote</h3>
+			<table class="table">
+				<tbody>
+					<tr>
+						<td ng-click="showRepositoriesFromSource('github')"><img class="img-thumbnail" style="vertical-align: middle; !important" src="https://avatars3.githubusercontent.com/u/3310939?s=24"/> <strong>sandipchitale</strong></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-4 column">
+			<div class="pull-right">
+				 <button class="btn btn-link" type="button"><span class="glyphicon glyphicon-plus"></span> create</button>
+				 <button class="btn btn-link" type="button"><span class="glyphicon glyphicon-refresh"></span> refresh</button>
+				 <button class="btn btn-link" type="button"><span class="glyphicon glyphicon-cog"></span> tools</button>
+			</div>
+			<br/>
+			<form class="form-horizontal" role="form">
+				<div class="form-group">
+					<div class="col-sm-12">
+						<input type="search" class="form-control" id="search" placeholder="Filter repositories"/>
+					</div>
+				</div>
+			</form>
+			<table class="table table-hover">
+				<tbody>
+					<tr ng-repeat="repository in repositorySources[mode].repositories" class="repository">
+						<td>
+							<span class="glyphicon glyphicon-book"></span> {{repository.label}}
+						</td>
+						<td style="text-align: right;">
+							<button class="btn btn-link" type="button" ng-show="mode != 'local'"><span class="glyphicon glyphicon-download"></span></button>
+							<button class="btn btn-link" type="button" ng-show="mode != 'local'"><span ng-show="mode != 'local'" class="glyphicon glyphicon-hdd"></span></button>
+							<button class="btn btn-link" type="button" ng-show="mode == 'local' && $index > 0"><span class="glyphicon glyphicon-chevron-up"></span></button>
+							<button class="btn btn-link" type="button" ng-click="showRepository($index)"><span class="glyphicon glyphicon-arrow-right"></span></button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							&nbsp;
+						</td>
+						<td style="text-align: right;">
+							&nbsp;
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="col-md-6 column">
+			<br/>
+			<h3>
+				Readme
+			</h3>
+			<p>
+				This describes the repository.
+			</p>
+
+		</div>
+	</div>
+</div>

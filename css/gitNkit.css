@@ -1,0 +1,25 @@
+body {
+	margin-top: 70px;
+}
+
+tr.repository {
+	line-height: 40px !important;
+	min-height:  40px !important;
+	height:      40px !important;
+}
+
+.repository td {
+	vertical-align: middle;
+}
+
+.collapsing {
+    -webkit-transition: none;
+    transition: none;
+}
+
+.mono {
+	font-family: "Courier New", Menlo, Monaco, Consolas, monospace !important;
+}
+.resize-vertical {
+	resize: vertical;
+}

@@ -1,0 +1,14 @@
+{
+	"name": "gitNkit",
+	"main": "gitNkit.html",
+	"description": "node-webkit based Git Client",
+	"version": "1.0.0",
+	"keywords": ["git", "node-webkit"],
+	"window": {
+		"toolbar": false,
+		"icon": "icons/gitNkit16.png",
+		"frame": false,
+		"width": 1100,
+		"height": 800
+	}
+}
