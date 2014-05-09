@@ -17,7 +17,7 @@
             templateUrl : 'templates/dashboard.html',
             controller: 'DashboardController'
         }).state('repository', {
-            url : '/repository',
+            url : '/repository/:mode/:index',
             templateUrl : 'templates/repository.html',
             controller: 'RepositoryController'
         });
@@ -73,11 +73,11 @@
             }
         }
         $scope.showRepositoriesFromSource('local');
-    }).controller('DashboardController', function($scope, $location) {
+    }).controller('DashboardController', function($scope, $location, $stateParams, $state) {
         $scope.showRepository = function(index) {
             $location.path('/repository');
         };
-    }).controller('RepositoryController', function($scope, $location) {
+    }).controller('RepositoryController', function($scope, $location, $stateParams, $state) {
         $scope.showDashboard = function() {
             $location.path('/dashboard');
         };
